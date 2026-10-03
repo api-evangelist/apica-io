@@ -1,0 +1,42 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.apica.io/product-overview/release-notes.md
+sources:
+- https://docs.apica.io/product-overview/release-notes.md
+- https://docs.apica.io/product-overview/release-notes/ascent-3.0.7.md
+- https://docs.apica.io/product-overview/release-notes/ascent-3.0.6.md
+- https://docs.apica.io/product-overview/release-notes/ascent-3.0.5.md
+entries:
+- breaking: false
+  highlights:
+  - This patch release makes log ingestion in Flow more reliable, with fixes for stalled connections , Datadog agent checks, large payload handling,
+    duplicate logs and search results during Redis disruption.
+  - 'More resilient ingestion when redis is slow or unavailable: Redis operations now have time limits, so a slow or unresponsive Redis can no
+    longer stall ingestion.'
+  - Fixed an issue where HTTP log ingestion (JSON batch, Datadog, and OTLP) could stop accepting new requests under sustained load.
+  - When oversized payload rejection is enabled, payloads larger than the ingest limit now get a "payload too large" (413) response instead of
+    "try again later" (429).
+  date: '2026-09-29'
+- breaking: false
+  highlights:
+  - This release adds direct Datadog Agent ingestion and encrypted connections for Redis and Postgres, improves chart legends and Datadog forwarding
+    compatibility, and fixes issues in pipeline rule creation, savings reporting, and permissions.
+  - 'Direct Ingestion from Datadog Agents: Data can now be ingested directly from Datadog Agents through a dedicated ingestion endpoint.'
+  - 'Secure Connections for Redis and Postgres: Connections to external Redis and Postgres data sources now support TLS encryption with certificate-based
+    authentication.'
+  - 'Datadog Forwarder Compatibility: Logs forwarded to Datadog Cloud now preserve standard fields such as status, timestamp, hostname, and service
+    at the top level.'
+  date: '2026-09-16'
+- breaking: false
+  highlights:
+  - This release delivers reliability and accuracy fixes across pipeline rules, log ingestion, and the Datadog forwarder, along with a set of
+    smaller bug fixes across Flow, Observe, Vanguard, and Fleet.
+  - 'Datadog forwarder payload cleanup: Duplicate severity fields carried over from log ingestion are no longer sent in the outbound Datadog payload,
+    reducing payload noise.'
+  - 'Log processing performance: Improved the efficiency of log parsing, reducing processing overhead under high load.'
+  - Fixed an issue where the AI assistant could not draft pipeline rules.
+  date: '2026-08-27'
+current_version: 3.0.7
+note: Versioning scheme follows Ascent X.Y.Z as shown in release note titles.
+docs: https://docs.apica.io/product-overview/release-notes.md

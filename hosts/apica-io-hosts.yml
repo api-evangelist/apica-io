@@ -1,0 +1,139 @@
+generated: '2026-10-03'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - other
+  - source
+  - status
+  - website
+hosts:
+- host: api-docs.apica.io
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: apica.io
+  role: other
+  relation: own
+- host: api.apica.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: apica.io
+  role: api
+  relation: own
+- host: apidocs.apica.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - APIReference
+  serves:
+  - docs
+  registrable_domain: apica.io
+  role: docs
+  relation: own
+- host: dev.apica.io
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  - docs
+  registrable_domain: apica.io
+  role: other
+  relation: own
+- host: docs.apica.io
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - ChangeLog
+  - GettingStarted
+  - Documentation
+  serves:
+  - docs
+  - hosting
+  title: Welcome to Apica Docs! | Apica Docs
+  status: 200
+  vendor: vercel
+  registrable_domain: apica.io
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: status.apica.io
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: apica.io
+  role: status
+  relation: own
+- host: trust.apica.io
+  found_by:
+  - pointer
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: apica.io
+  role: other
+  relation: own
+- host: www.apica.io
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Security
+  - PrivacyPolicy
+  - Newsroom
+  - Leadership
+  - Blog
+  - Website
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: apica.io
+  role: website
+  relation: own

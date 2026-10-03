@@ -1,0 +1,16 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.apica.io/integrations/list-of-integrations/alert-destinations/webhooks.md
+sources:
+- https://docs.apica.io/integrations/list-of-integrations/alert-destinations/webhooks.md
+- https://docs.apica.io/autonomous-insights/alert-destinations/webhook.md
+- https://docs.apica.io/autonomous-insights/alert-destinations/webhook/webhook-destination-field-and-payload-mappers.md
+- https://docs.apica.io/platform-docs/synthetic-monitoring-overview/explore-the-platform/integrations/webhook-integration.md
+description: Apica Webhooks deliver alert notifications when an alert changes state.
+events:
+- event: alert_state_change
+  description: Sent when an alert changes state (e.g., from OK to Triggered) and includes detailed alert data.
+delivery:
+  auth: basic
+docs: https://docs.apica.io/integrations/list-of-integrations/alert-destinations/webhooks.md

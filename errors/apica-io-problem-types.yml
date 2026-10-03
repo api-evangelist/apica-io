@@ -1,0 +1,25 @@
+generated: '2026-10-03'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/apica-io-openapi.json
+format: custom
+envelope:
+  media_type: null
+  schema: ApiKeyErrorResponse
+coverage:
+  operations: 1
+  statuses_declared: 2
+problems:
+- status: 401
+  title: Unauthorized
+  description: Unauthorized
+  operations: 1
+  media_types: []
+  schema: null
+- status: 502
+  title: Bad Gateway
+  description: Bad Gateway - Casdoor request failed
+  operations: 1
+  media_types: []
+  schema: ApiKeyErrorResponse

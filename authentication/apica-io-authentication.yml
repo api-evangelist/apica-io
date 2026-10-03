@@ -1,0 +1,19 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.apica.io/admin/api-key-management.md
+sources:
+- https://docs.apica.io/admin/api-key-management.md
+- https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token.md
+- https://docs.apica.io/platform-docs/zebratester-scripting/zebratester-user-guide/advanced-topics/credentials-manager-for-zebratester.md
+- https://docs.apica.io/platform-docs/zebratester-scripting/zebratester-how-to-articles/how-to-configure-a-zebratester-script-to-fetch-credentials-from-cyberark.md
+description: Authentication methods published on Apica documentation pages.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: 'API Keys in ascent are used to access APIs. They are embedded in the API request using the `Authorization: Bearer <api-key>` header.'
+  location: header
+  header: Authorization
+  how_to_obtain: Create an API Key via the API Key page in the UI (API Key > Create New Key) or retrieve an existing key from the API key page.
+note: No OAuth2, http‑basic, http‑bearer, JWT, HMAC, mTLS, or other authentication schemes were found in the provided pages.
+docs: https://docs.apica.io/admin/api-key-management.md

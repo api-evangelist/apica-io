@@ -1,23 +1,92 @@
 aid: apica-io
 name: Apica
-description: 'Apica is a company surfaced via the API Evangelist harvest backlog (source: gartner-mq)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://www.apica.io/wp-admin/admin-ajax.php?action=rank_math_overlay_thumb&id=85029&type=play&hash=e71fe055fb7e2403dd352a4fdc470303
+description: Apica provides a modern observability platform delivering telemetry pipelines, synthetic monitoring, and AI‑ready data management
+  for enterprises. Their solutions include flow control, lake storage, real‑time metrics, synthetic checks, and AI‑driven observability, helping
+  organizations monitor, troubleshoot, and optimize complex cloud‑native environments.
 url: https://raw.githubusercontent.com/api-evangelist/apica-io/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:gartner-mq
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-03'
 modified: '2026-10-03'
 tags:
 - Company
-apis: []
+- Observability
+- Telemetry
+- AI
+- Cloud
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/apica-io-agentic-access.yml
+- type: Spectral
+  url: rules/apica-io-rules.yml
+- type: Webhooks
+  url: asyncapi/apica-io-webhooks.yml
+- type: ChangeLog
+  url: changelog/apica-io-changelog.yml
+- type: Compliance
+  url: https://trust.apica.io/
+- type: Authentication
+  url: authentication/apica-io-authentication.yml
+- type: ErrorCatalog
+  url: errors/apica-io-problem-types.yml
+- type: Conformance
+  url: conformance/apica-io-conformance.yml
+- type: Overlay
+  url: overlays/apica-io-openapi-overlay.yml
+- type: LLMsTxt
+  url: llms/apica-io-llms.txt
+- type: WellKnown
+  url: well-known/apica-io-well-known.yml
+- type: Hosts
+  url: hosts/apica-io-hosts.yml
+- type: Vendors
+  url: vendors/apica-io-vendors.yml
+- type: TermsOfService
+  url: https://www.apica.io/policy/terms
+- type: Security
+  url: https://www.apica.io/security/
+- type: PrivacyPolicy
+  url: https://www.apica.io/policy/privacy
+- type: Newsroom
+  url: https://www.apica.io/news/
+- type: Leadership
+  url: https://www.apica.io/leadership/
+- type: GitHubOrganization
+  url: https://github.com/ApicaSystem
+- type: ChangeLog
+  url: https://docs.apica.io/product-overview/release-notes
+- type: Blog
+  url: https://www.apica.io/blog/
+- type: GettingStarted
+  url: https://docs.apica.io/getting-started/ascent
+- type: TrustCenter
+  url: security/apica-io-trust-center.yml
+- type: DomainSecurity
+  url: security/apica-io-domain-security.yml
 - type: Website
   url: https://www.apica.io
+- type: Documentation
+  url: https://docs.apica.io
+- type: APIReference
+  url: https://apidocs.apica.io
+apis:
+- name: Apica API
+  description: Apica observability platform API
+  humanURL: https://docs.apica.io
+  baseURL: https://dev.apica.io
+  aid: apica-io:apica-api
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
