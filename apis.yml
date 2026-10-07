@@ -24,6 +24,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Pricing
+  url: https://www.apica.io/cost-savings/
+- type: Plans
+  url: plans/apica-io-plans-pricing.yml
 - type: AgenticAccess
   url: agentic-access/apica-io-agentic-access.yml
 - type: Spectral
